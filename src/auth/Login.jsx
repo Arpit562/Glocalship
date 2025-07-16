@@ -28,7 +28,7 @@ function Login() {
         <div className="auth-card">
           <div className="auth-image-section">
             <img
-              src="https://www.dropoff.com/wp-content/webp-express/webp-images/uploads/2023/02/Delivery-as-a-service-3-1536x900.jpeg.webp"
+              src="/img/signin-form-img.png"
               alt="Login visual"
               className="auth-image"
             />

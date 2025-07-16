@@ -40,8 +40,8 @@ function Signup() {
         <div className="auth-card">
           <div className="auth-image-section">
             <img
-              src="https://calflavins.ie/wp-content/uploads/2022/12/New-delivery-services-pop-up-amid-social-distancing-era.jpg"
-              alt="Signup visual"
+              src="/img/signup-image.png"
+              alt="Signup visual"cd   
               className="auth-image"
             />
           </div>

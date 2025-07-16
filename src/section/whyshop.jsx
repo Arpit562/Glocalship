@@ -4,7 +4,7 @@ const features = [
   {
     title: 'Free Shipping Everywhere in India',
     desc: 'Enjoy free delivery to all destinations across India. We make sure your package reaches every corner of the country, fast and safe.',
-    img: '/img/servise/delivery-2.jpg',
+    img: '/img/whyShopFree.jpg',
     alt: 'Free Shipping',
     badge: 'Shipping',
     color: '#38bdf8',
@@ -12,7 +12,7 @@ const features = [
   {
     title: 'Exclusive Offers and Deals',
     desc: 'Unlock discounts up to 70% on 30,000+ products. Shop smarter with our handpicked deals and limited-time offers.',
-    img: '/img/online-shop.png',
+    img: '/img/whyShopOffer.jpg',
     alt: 'Exclusive Offers',
     badge: 'Deals',
     color: '#fbbf24',
@@ -20,7 +20,7 @@ const features = [
   {
     title: 'The Best Price in the Market',
     desc: 'Get unmatched savings and transparent pricing on every order. No hidden fees, just the best value for your money.',
-    img: '/img/servise/delivery-4.jpg',
+    img: '/img/whyShopPrice.jpg',
     alt: 'Best Price',
     badge: 'Best Price',
     color: '#10b981',
@@ -117,9 +117,10 @@ const WhyShopWithUs = () => {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    maxHeight: 320,
+                    // maxHeight: 320,
                     borderRadius: idx % 2 === 0 ? '2rem 0 0 2rem' : '0 2rem 2rem 0',
-                    boxShadow: '0 2px 16px rgba(56,189,248,0.10)'
+                    boxShadow: '0 2px 16px rgba(56,189,248,0.10)',
+                    overflow:'hidden'
                   }}
                 />
               </div>
