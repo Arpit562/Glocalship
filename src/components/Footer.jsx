@@ -14,15 +14,22 @@ function Footer() {
             {/* Logo + About */}
             <div className="footer-logo-section">
               <div className="footer-logo">
-                <div className="logo-icon">
-                  <Package className="icon-white" />
-                </div>
-                <span className="footer-brand">ShipForward</span>
+
+
               </div>
+              <div className="flex justify-center items-center p-0 m-0">
+                <img
+                  src="/img/logo2.png"
+                  alt="Glocalship Logo"
+                  className="w-32 h-auto object-contain block "
+                />
+              </div>
+
+
               <p className="footer-description">
                 Your trusted partner for international package forwarding from India. Shop globally, ship locally.
               </p>
-              <div className="footer-social-icons">
+              <div className="footer-social-icons ">
                 <Facebook className="social-icon fb" />
                 <Twitter className="social-icon tw" />
                 <Instagram className="social-icon ig" />

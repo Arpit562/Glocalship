@@ -1,4 +1,4 @@
-// src/pages/AdminLogin.jsx
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../auth.css';
@@ -15,7 +15,6 @@ const AdminLogin = () => {
   const handleAdminLogin = (e) => {
     e.preventDefault();
     if (adminId === ADMIN_ID && password === ADMIN_PASSWORD) {
-      // Save admin login flag in sessionStorage (or localStorage)
       sessionStorage.setItem("isAdminLoggedIn", "true");
       navigate("/admin/dashboard");
     } else {
@@ -24,42 +23,35 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="auth-bg">
-      <div className="auth-container">
-        <div className="auth-card">
-          <div className="auth-image-section">
-            <img
-              src="https://img.freepik.com/free-vector/admin-panel-concept-illustration_114360-4777.jpg"
-              alt="Admin Login Visual"
-              className="auth-image"
+    <div className="admin-login-bg">
+      <div className="admin-login-container">
+        <div className="admin-login-card">
+          <h2 className="admin-login-title">Admin Login</h2>
+          <p className="admin-login-subtitle">Sign in to manage parcel orders and users</p>
+
+          <form onSubmit={handleAdminLogin} className="admin-login-form">
+            <input
+              type="text"
+              placeholder="Admin ID"
+              className="admin-login-input"
+              value={adminId}
+              onChange={(e) => setAdminId(e.target.value)}
+              required
             />
-          </div>
-          <div className="auth-form-section">
-            <h2 className="auth-title">Admin Login</h2>
-            <p className="auth-subtitle">Sign in to manage parcel orders and users</p>
-            <form onSubmit={handleAdminLogin}>
-              <input
-                type="text"
-                className="auth-input"
-                placeholder="Admin ID"
-                value={adminId}
-                onChange={(e) => setAdminId(e.target.value)}
-                required
-              />
-              <input
-                type="password"
-                className="auth-input"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              {error && <div className="auth-status">{error}</div>}
-              <button type="submit" className="auth-btn">Login</button>
-            </form>
-            <div className="auth-links">
-              <p><a href="/">Back to Home</a></p>
-            </div>
+            <input
+              type="password"
+              placeholder="Password"
+              className="admin-login-input"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {error && <p className="admin-login-error">{error}</p>}
+            <button type="submit" className="admin-login-button">Login</button>
+          </form>
+
+          <div className="admin-login-footer">
+            <a href="/" className="admin-login-link">Back to Home</a>
           </div>
         </div>
       </div>

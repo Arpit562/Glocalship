@@ -39,17 +39,20 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/10"
+      className="fixed top-0 w-full left-0 right-0 z-50 glass-effect border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600">
-              <Package className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl font-bold gradient-text">ShipForward</span>
-          </Link>
+          
+          <div>
+            <Link to="/" className="block overflow-visible">
+              <img
+                src="/img/logo.png"
+                alt="Glocalship Logo"
+                className="w-32 ms-4 h-auto object-contain block"
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -61,8 +64,8 @@ const Navbar = () => {
                   key={item.name}
                   to={item.path}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 ${isActive
-                      ? 'bg-blue-500/20 text-blue-400'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    ? 'bg-blue-500/20 text-blue-400'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
                 >
                   <Icon className="h-4 w-4" />
@@ -138,8 +141,8 @@ const Navbar = () => {
                     to={item.path}
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${isActive
-                        ? 'bg-blue-500/20 text-blue-400'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      ? 'bg-blue-500/20 text-blue-400'
+                      : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }`}
                   >
                     <Icon className="h-4 w-4" />
