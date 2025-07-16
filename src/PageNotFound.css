@@ -1,0 +1,122 @@
+.not-found-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;                 /* ✅ Flexbox added */
+  flex-direction: column;       /* ✅ Vertical stacking */
+  justify-content: center;      /* ✅ Vertically centered */
+  align-items: center;          /* ✅ Horizontally centered */
+  text-align: center;
+  font-family: "Georgia", serif;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 1;
+  animation: gradientBG 10s ease infinite;
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569, #64748b);
+  background-size: 400% 400%;
+}
+
+
+/* Eyes */
+.eyes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  /* margin-top: 20px; */
+  margin-bottom: 80px;  /* ✅ Now this will apply correctly */
+  z-index: 2;
+  width: 100%;
+}
+
+
+
+.eye {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  animation: eyeWobble 4s ease-in-out infinite alternate;
+  align-items: center;
+}
+
+.pupil {
+  /* remove: margin-bottom: 80px; */
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.2s ease;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 404 Text */
+.error-text {
+  font-size: 36px;
+   margin-top: 20px;
+  color: #a855f7;
+  z-index: 2;
+  animation: floatText 3s ease-in-out infinite;
+  text-align: center;
+  margin-bottom: 80px;
+
+}
+
+/* Home Button */
+.home-btn {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 2;
+  box-shadow: 0 0 10px #a855f7;
+  transition: all 0.3s ease;
+  margin-bottom: 80px;
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a855f7, 0 0 30px #6366f1;
+}
+
+/* ===== Animations ===== */
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes eyeWobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}

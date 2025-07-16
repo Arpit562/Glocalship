@@ -7,6 +7,7 @@ import HomePage from '@/pages/HomePage';
 import Dashboard from '@/pages/Dashboard';
 import TrackingPage from '@/pages/TrackingPage';
 import PricingPage from '@/pages/PricingPage';
+import NotFound from '@/pages/PageNotFound';
 import Signup from '@/auth/Signup';
 import Login from '@/auth/Login';
 import { AuthProvider } from '@/auth/AuthProvider';
@@ -41,6 +42,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              <Route path="/*" element={<NotFound />} />
           </Routes>
           <Toaster />
         </div>
