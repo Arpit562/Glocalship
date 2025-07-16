@@ -29,7 +29,7 @@ const AdminLogin = () => {
         <div className="auth-card">
           <div className="auth-image-section">
             <img
-              src="https://img.freepik.com/free-vector/admin-panel-concept-illustration_114360-4777.jpg"
+              src="/img/admin-form.jpg"
               alt="Admin Login Visual"
               className="auth-image"
             />
