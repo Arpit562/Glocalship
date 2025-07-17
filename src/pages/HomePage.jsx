@@ -188,7 +188,7 @@ const HomePage = () => {
                 <img
                   alt="International shipping and package forwarding illustration"
                   className="w-full h-auto rounded-2xl shadow-2xl floating-animation"
-                  src="./img/online-shop.png" />
+                  src="/img/ban-removebg-preview.png" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
             </motion.div>
