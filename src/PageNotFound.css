@@ -1,3 +1,8 @@
+/* *{
+    width: 0%;
+    height: 0%;
+} */
+
 .not-found-container {
   position: relative;
   min-height: 100vh;
