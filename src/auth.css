@@ -160,17 +160,37 @@
   justify-content: center;
   padding: 0 16px;
 }
+/* 
+.admin-login-image {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-login-image img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+} */
+
+.admin-avatar {
+  width: 80px;
+  height: 80px;
+  margin-left: 130px;
+color: #00e0ca;
+}
 
 .admin-login-container {
   width: 100%;
   max-width: 350px;
-      height: 450px;
+  height: 450px;
   padding: 32px;
   color: white;
   border-bottom: 2px solid #3b82f6;
 
   border-radius: 0;
-  /* removes border radius if any */
+
 }
 
 
@@ -216,7 +236,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6); 
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -225,7 +245,7 @@
 }
 
 .admin-login-button:hover {
- background: linear-gradient(to right, #2563eb, #7c3aed); 
+  background: linear-gradient(to right, #2563eb, #7c3aed);
 }
 
 .pulse-glow {
@@ -236,9 +256,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.6);
   }
+
   70% {
     box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
   }
@@ -267,4 +289,11 @@
 .admin-login-link:hover {
   text-decoration: underline;
   color: #3b82f6;
+}
+
+@media(max-width: 600px) {
+ .admin-avatar {
+  margin-left: 60px;
+}
+
 }
