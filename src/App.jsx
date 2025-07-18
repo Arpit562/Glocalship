@@ -7,7 +7,8 @@ import HomePage from '@/pages/HomePage';
 import Dashboard from '@/pages/Dashboard';
 import TrackingPage from '@/pages/TrackingPage';
 import PricingPage from '@/pages/PricingPage';
-import NotFound from '@/pages/PageNotFound';
+import PageNotFound from './pages/PageNotFound1'; 
+
 import NotFound1 from '@/pages/PageNotFound1';
 import Signup from '@/auth/Signup';
 import Login from '@/auth/Login';
@@ -43,7 +44,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-              <Route path="/*" element={<NotFound1/>} />
+              <Route path="/  " element={<PageNotFound />} /> <Route path="*" element={<NotFound1/>} />
           </Routes>
           <Toaster />
         </div>

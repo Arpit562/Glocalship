@@ -1,4 +1,4 @@
-.lost-page {
+/* .lost-page {
     background: linear-gradient(to bottom, #0f172a, #1e293b);
     background-image: url("/img/illustration/city-bg.png");
     background-repeat: no-repeat;
@@ -82,5 +82,116 @@
   .lost-square {
     width: 12px;
     height: 12px;
+  }
+} */
+
+
+.lost-page {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  background-image: url("/img/illustration/city-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lost-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 48px 32px;
+  max-width: 760px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.lost-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.lost-square {
+  width: 28px;
+  height: 28px;
+  background-color: #2335d9;
+  border-radius: 6px;
+}
+
+.lost-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.lost-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  margin: 20px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lost-title {
+    font-size: 30px;
+  }
+
+  .lost-box {
+    padding: 32px 20px;
+  }
+
+  .lost-header {
+    gap: 12px;
+  }
+
+  .lost-square {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lost-title {
+    font-size: 24px;
+  }
+
+  .lost-box {
+    padding: 24px 12px;
+  }
+
+  .lost-header {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .lost-square {
+    width: 16px;
+    height: 16px;
   }
 }
