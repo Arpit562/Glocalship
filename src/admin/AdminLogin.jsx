@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+// src/pages/AdminLogin.jsx
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Player } from '@lottiefiles/react-lottie-player';
-import '../auth.css';
 
 const ADMIN_ID = "admin123";
 const ADMIN_PASSWORD = "admin@123";
@@ -20,60 +19,67 @@ const AdminLogin = () => {
     } else {
       setError("Invalid admin ID or password");
     }
-
-
-
-    useEffect(() => {
-      import("https://cdn.lordicon.com/lordicon.js");
-    }, []);
-
   };
 
-
+  useEffect(() => {
+    import("https://cdn.lordicon.com/lordicon.js");
+  }, []);
 
   return (
-    <div className="admin-login-bg">
-      <div className="admin-login-container">
-
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-500 px-4 py-8">
+      <div className="bg-white rounded-3xl shadow-2xl flex  max-w-4xl overflow-hidden flex-col items-center px-8 py-12">cd
+        
         {/* Lordicon Avatar */}
-        <div className="flex justify-center mb-6">
+        <div className="mb-4">
           <lord-icon
             src="https://cdn.lordicon.com/ljvjsnvh.json"
             trigger="hover"
-            class="admin-avatar"
+            style={{ width: "80px", height: "80px" }}
           ></lord-icon>
         </div>
 
-        <h2 className="admin-login-title">Admin Login</h2>
-        <p className="admin-login-subtitle">Sign in to manage parcel orders and users</p>
+        {/* Heading */}
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">Admin Login</h2>
+        <p className="text-gray-600 mb-6 text-center">Sign in to manage parcel orders and users</p>
 
-        <form onSubmit={handleAdminLogin} className="admin-login-form">
+        {/* Form */}
+        <form onSubmit={handleAdminLogin} className="w-full max-w-md space-y-5">
           <input
             type="text"
             placeholder="Admin ID"
-            className="admin-login-input"
             value={adminId}
             onChange={(e) => setAdminId(e.target.value)}
             required
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
+
           <input
             type="password"
             placeholder="Password"
-            className="admin-login-input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          {error && <p className="admin-login-error">{error}</p>}
-          <button type="submit" className="admin-login-button">Login</button>
+
+          {error && <p className="text-sm text-red-500 text-center">{error}</p>}
+
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition duration-200"
+          >
+            Login
+          </button>
         </form>
 
-        <div className="admin-login-footer">
-          <a href="/" className="admin-login-link">Back to Home</a>
+        {/* Footer */}
+        <div className="mt-6">
+          <a href="/" className="text-blue-600 font-medium hover:underline">
+            ← Back to Home
+          </a>
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -120,6 +120,7 @@
   text-align: center;
 }
 
+
 .auth-links {
   text-align: center;
   color: #b8c1ec;
@@ -229,28 +230,15 @@ color: #00e0ca;
   color: #fff;
   font-size: 1rem;
   outline: none;
-  transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.07);
-  padding: 12px 0;
-  border: none;
-  border-bottom: 2px solid #3b82f6;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-  outline: none;
-  padding: 10px;
 }
 
 .admin-login-input:focus {
-  border-bottom: 2px solid #8b5cf6;
-  background: transparent;
+  border-bottom: 1px solid #8b5cf6;
 }
 
 .admin-login-input:focus {
   box-shadow: 0 0 0 2px #6c63ff;
 }
-
 
 .admin-login-button {
   padding: 12px 20px;
@@ -261,10 +249,8 @@ color: #00e0ca;
   border-radius: 16px;
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 .admin-login-button:hover {

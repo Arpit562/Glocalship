@@ -187,7 +187,7 @@ const HomePage = () => {
               <div className="relative z-10">
                 <img
                   alt="International shipping and package forwarding illustration"
-                  className="w-full h-auto rounded-2xl shadow-2xl floating-animation"
+                  className="w-full h-auto rounded-2xl floating-animation"
                   src="/img/banner-img.png" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
