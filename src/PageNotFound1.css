@@ -1,0 +1,86 @@
+.lost-page {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    background-image: url("/img/illustration/city-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lost-box {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 24px;
+  max-width: 800px;
+  width: 70%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.lost-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lost-square {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(35, 35, 164);
+  border-radius: 4px;
+}
+
+.lost-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.lost-image {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .lost-title {
+    font-size: 30px;
+  }
+
+  .lost-box {
+    padding: 24px 16px;
+  }
+
+  .lost-header {
+    gap: 12px;
+  }
+
+  .lost-square {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lost-title {
+    font-size: 24px;
+  }
+
+  .lost-box {
+    padding: 16px 8px;
+  }
+
+  .lost-header {
+    gap: 8px;
+  }
+
+  .lost-square {
+    width: 12px;
+    height: 12px;
+  }
+}
