@@ -371,7 +371,7 @@ body {
 }
 
 .footer-link:hover {
-  color: black;
+  color: #d1d5db;
 }
 
 .links-section {
@@ -482,7 +482,6 @@ body {
   .footer-description {
     font-size: 13.5px;
     line-height: 1.5;
-    text-align: center;
   }
   .footer-contact {
     gap: 0.8rem;

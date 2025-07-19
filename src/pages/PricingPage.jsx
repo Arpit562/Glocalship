@@ -8,12 +8,12 @@ import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/components/ui/use-toast';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { 
-  Calculator, 
-  Package, 
-  Truck, 
-  Plane, 
-  CheckCircle, 
+import {
+  Calculator,
+  Package,
+  Truck,
+  Plane,
+  CheckCircle,
   Star,
   Globe,
   Shield,
@@ -131,7 +131,7 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       <div className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -144,7 +144,7 @@ const PricingPage = () => {
               Simple, <span className="gradient-text">Transparent Pricing</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your international shopping needs. 
+              Choose the perfect plan for your international shopping needs.
               No hidden fees, no surprises.
             </p>
           </motion.div>
@@ -186,9 +186,9 @@ const PricingPage = () => {
                     />
                   </div>
                 </div>
-                
-                <Button 
-                  onClick={calculateShipping} 
+
+                <Button
+                  onClick={calculateShipping}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600"
                 >
                   Calculate Shipping Cost
@@ -226,7 +226,7 @@ const PricingPage = () => {
                   <p className="text-sm text-gray-400 mb-2">Popular destinations:</p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {shippingRates.map((country) => (
-                      <Badge 
+                      <Badge
                         key={country.country}
                         variant="outline"
                         className="cursor-pointer hover:bg-white/10"
@@ -253,7 +253,7 @@ const PricingPage = () => {
               <p className="text-gray-400">All plans include your Indian virtual address and basic features</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 ">
               {plans.map((plan, index) => (
                 <motion.div
                   key={index}
@@ -263,15 +263,15 @@ const PricingPage = () => {
                   className="relative"
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 mb-4">
                       <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                         <Star className="mr-1 h-3 w-3" />
                         Most Popular
                       </Badge>
                     </div>
                   )}
-                  
-                  <Card className={`glass-effect border-white/10 card-hover h-full ${plan.popular ? 'ring-2 ring-blue-500/50' : ''}`}>
+
+                  <Card className={`glass-effect border-white/10 card-hover h-full mt-7 ${plan.popular ? 'ring-2 ring-blue-500/50' : ''}`}>
                     <CardHeader>
                       <CardTitle className="text-2xl">{plan.name}</CardTitle>
                       <div className="text-3xl font-bold gradient-text">{plan.price}</div>
@@ -286,8 +286,8 @@ const PricingPage = () => {
                           </li>
                         ))}
                       </ul>
-                      
-                      <Button 
+
+                      <Button
                         onClick={() => handlePlanSelect(plan.name)}
                         className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-purple-600' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}

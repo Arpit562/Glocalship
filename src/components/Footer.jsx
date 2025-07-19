@@ -28,7 +28,7 @@ function Footer() {
                 />
               </div>
 
-              <p className="footer-description text-sm text-gray-300">
+              <p className="footer-description text-gray-300">
                 Your trusted partner for international package forwarding from India. Shop globally, ship locally.
               </p>
 
