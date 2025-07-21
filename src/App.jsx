@@ -44,7 +44,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-              <Route path="/  " element={<PageNotFound />} /> <Route path="*" element={<NotFound1/>} />
+              <Route path="/" element={<PageNotFound />} /> <Route path="*" element={<NotFound1/>} />
           </Routes>
           <Toaster />
         </div>

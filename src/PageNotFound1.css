@@ -1,4 +1,4 @@
-.error-page {
+/* .error-page {
   background-color: #1f1b3a;
   color: white;
   min-height: 100vh;
@@ -66,7 +66,7 @@
 }
 
 /* 🔻 Responsive tweaks */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .error-message h1 {
     font-size: 2rem;
   }
@@ -100,4 +100,49 @@
 
 .zigzag-animation {
   animation: zigzag404 2s ease-in-out infinite alternate;
-} 
+}  */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+}
+
+.dark-404-container {
+  height: 100vh;
+  background-color: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.dark-404-title {
+  font-size: 10rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dark-404-subtext {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #e2e8f0;
+}
+
+.dark-home-link {
+  color: #00e0ca;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dark-home-link:hover {
+  color: #02cab7;
+  text-decoration: underline;
+}
