@@ -14,7 +14,7 @@ import Signup from '@/auth/Signup';
 import Login from '@/auth/Login';
 import { AuthProvider } from '@/auth/AuthProvider';
 import { useAuth } from '@/auth/AuthProvider';
-import AdminLogin from '@/admin/AdminLogin';
+import AdminLogin from './admin/AdminLogin';
 import AdminDashboard from '@/admin/AdminDashboard';
 import ScrollToTop from './Top';
 import './Lordicon'

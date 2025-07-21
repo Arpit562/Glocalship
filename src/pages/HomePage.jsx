@@ -123,7 +123,7 @@ const HomePage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 mt-8">
+      <section className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 mt-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -146,11 +146,11 @@ const HomePage = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row ">
                 <Button
                   size="lg"
                   onClick={handleGetStarted}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 pulse-glow"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 pulse-glow mx-4 mb-4 "
                 >
                   Get Your Address Now
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -188,7 +188,7 @@ const HomePage = () => {
                 <img
                   alt="International shipping and package forwarding illustration"
                   className="w-full h-auto rounded-2xl floating-animation"
-                  src="/img/banner-img.png" />
+                  src="/img/bannerimage2-bgremo.png" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
             </motion.div>
@@ -209,7 +209,7 @@ const HomePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Why Choose <span className="gradient-text">ShipForward?</span>
+              Why Choose <span className="gradient-text">Glocalship</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We make international shopping from India simple, secure, and affordable

@@ -57,36 +57,143 @@ const AdminDashboard = () => {
       <div className="auth-container" style={{ maxWidth: 1300, width: '100%' }}>
         <div className="auth-card" style={{ flexDirection: 'column', width: '100%', minHeight: 600, boxShadow: '0 8px 32px 0 rgba(31,38,135,0.25)', background: 'rgba(34,40,49,0.85)', border: '1.5px solid #232946', backdropFilter: 'blur(8px)' }}>
           {/* Header */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 24, borderBottom: '1.5px solid #232946', marginBottom: 24 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-              <img src="/public/img/logistics.png" alt="Logo" style={{ width: 44, height: 44, borderRadius: 12, boxShadow: '0 2px 8px #3b82f633' }} />
-              <h2 className="auth-title" style={{ margin: 0, fontSize: '2rem', letterSpacing: 1 }}>Admin Dashboard</h2>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingBottom: 24,
+            borderBottom: '1.5px solid #232946',
+            marginBottom: 24,
+            flexWrap: 'wrap',
+            gap: 16
+          }}>
+            {/* Admin Dashboard */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 16,
+              flex: 1,
+              minWidth: 250
+            }}>
+            
+              <h2 style={{
+                margin: 0,
+                padding: '0.5rem 1rem',
+                fontSize: '2rem',
+                letterSpacing: 1,
+                borderBottom: '2px solid #3b82f6',
+                color: '#fff'
+              }}>
+                Admin Dashboard
+              </h2>
             </div>
-            <div style={{ position: 'relative' }}>
-              <button className="auth-btn" style={{ maxWidth: 160, padding: '0.7rem 1.2rem', margin: 0, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', fontWeight: 600 }} onClick={() => setShowProfile(v => !v)}>
-                <span style={{ marginRight: 8, fontWeight: 500 }}>Admin</span>
-                <svg width="18" height="18" fill="#fff" style={{ verticalAlign: 'middle' }}><circle cx="9" cy="7" r="4"/><ellipse cx="9" cy="15" rx="6" ry="3"/></svg>
+
+            {/* Profile Button */}
+            <div style={{
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              flex: 1,
+              minWidth: 200
+            }}>
+              <button
+                style={{
+                  maxWidth: 160,
+                  padding: '0.7rem 1.2rem',
+                  background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
+                  fontWeight: 600,
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 8,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onClick={() => setShowProfile(v => !v)}
+              >
+                <span style={{ marginRight: 8 }}>Admin</span>
+                <svg width="18" height="18" fill="#fff" style={{ verticalAlign: 'middle' }}>
+                  <circle cx="9" cy="7" r="4" />
+                  <ellipse cx="9" cy="15" rx="6" ry="3" />
+                </svg>
               </button>
+
+              {/* Dropdown */}
               {showProfile && (
-                <div style={{ position: 'absolute', right: 0, top: 48, background: '#232946', color: '#fff', borderRadius: 12, boxShadow: '0 4px 24px #0002', minWidth: 180, zIndex: 10, padding: 16, border: '1px solid #3b82f6' }}>
+                <div style={{
+                  position: 'absolute',
+                  right: 0,
+                  top: 48,
+                  background: '#232946',
+                  color: '#fff',
+                  borderRadius: 12,
+                  boxShadow: '0 4px 24px #0002',
+                  minWidth: 180,
+                  zIndex: 10,
+                  padding: 16,
+                  border: '1px solid #3b82f6'
+                }}>
                   <div style={{ fontWeight: 600, marginBottom: 8 }}>Admin</div>
-                  <button className="auth-btn" style={{ width: '100%', margin: 0, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)' }} onClick={handleLogout}>Logout</button>
-                  <button className="auth-btn" style={{ width: '100%', margin: '8px 0 0 0', background: 'transparent', color: '#b8c1ec', border: '1px solid #3b82f6' }} onClick={() => setShowProfile(false)}>Close</button>
+                  <button
+                    style={{
+                      width: '100%',
+                      padding: '0.6rem',
+                      margin: '4px 0',
+                      background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
+                      border: 'none',
+                      color: '#fff',
+                      borderRadius: 6,
+                      cursor: 'pointer'
+                    }}
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                  <button
+                    style={{
+                      width: '100%',
+                      padding: '0.6rem',
+                      marginTop: 8,
+                      background: 'transparent',
+                      color: '#b8c1ec',
+                      border: '1px solid #3b82f6',
+                      borderRadius: 6,
+                      cursor: 'pointer'
+                    }}
+                    onClick={() => setShowProfile(false)}
+                  >
+                    Close
+                  </button>
                 </div>
               )}
             </div>
           </div>
+
           {/* Search Bar */}
-          <div style={{ marginBottom: 24, display: 'flex', justifyContent: 'flex-end' }}>
+          <div style={{
+            marginBottom: 24,
+            display: 'flex',
+            justifyContent: 'flex-end'
+          }}>
             <input
               type="text"
-              className="auth-input"
-              style={{ maxWidth: 320, background: '#161b22', border: '1.5px solid #3b82f6', color: '#fff', fontSize: 16 }}
               placeholder="Search by Name, Parcel ID, or Phone..."
               value={search}
               onChange={e => setSearch(e.target.value)}
+              style={{
+                maxWidth: 320,
+                width: '100%',
+                background: '#161b22',
+                border: '1.5px solid #3b82f6',
+                color: '#fff',
+                fontSize: 16,
+                padding: '0.6rem 1rem',
+                borderRadius: 8
+              }}
             />
           </div>
+
           {/* Table or Empty State */}
           <div style={{ overflowX: 'auto', width: '100%', flex: 1 }}>
             {filteredOrders.length === 0 ? (
@@ -149,3 +256,5 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
+

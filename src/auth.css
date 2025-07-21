@@ -1,4 +1,4 @@
-/* Auth Page Theme - ShipForward Style */
+/* Auth Page Theme - glocalship Style */
 
 .auth-bg {
   min-height: 100vh;
@@ -155,7 +155,9 @@
 } 
 
 
-/* Admin Login Page Theme - ShipForward Style */
+
+
+/* Admin Login Page Theme -  Glocalship Style */
 .admin-login-bg {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   height: 97vh;

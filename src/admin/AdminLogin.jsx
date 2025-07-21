@@ -21,14 +21,14 @@ const AdminLogin = () => {
     }
   };
 
-  useEffect(() => {
-    import("https://cdn.lordicon.com/lordicon.js");
-  }, []);
+ 
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-500 px-4 py-8">
       <div className="bg-white rounded-3xl shadow-2xl flex  max-w-4xl overflow-hidden flex-col items-center px-8 py-12">cd
-        
+
         {/* Lordicon Avatar */}
         <div className="mb-4">
           <lord-icon
@@ -50,7 +50,7 @@ const AdminLogin = () => {
             value={adminId}
             onChange={(e) => setAdminId(e.target.value)}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
           />
 
           <input
@@ -59,7 +59,7 @@ const AdminLogin = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl   focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
           />
 
           {error && <p className="text-sm text-red-500 text-center">{error}</p>}

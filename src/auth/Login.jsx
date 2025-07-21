@@ -7,7 +7,7 @@ import { Eye, EyeOff } from "lucide-react"; // ✅ Lucide icons
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // 👁️ toggle state
+  const [showPassword, setShowPassword] = useState(false); 
   const [status, setStatus] = useState("");
   const navigate = useNavigate();
 
